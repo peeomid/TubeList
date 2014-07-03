@@ -1,17 +1,17 @@
-Streamus™
+TubeList
 =========
-
-A Google Chrome extension which allows users to add YouTube videos to playlists, share playlists and discover new YouTube videos.
+A simplified version of [Streamus](https://streamus.com/) (a chrome extension to play youtube musics), with no backend and added shortcut from youtube.
 
 Overview
 ========
 
-Streamus consists of a front-end client, the Google Chrome extension, a back-end server ("Streamus Server"), server test cases ("Streamus Server Tests"), and a website.
+My purpose is to simplified Streamus:
+- remove back-end need, just the chrome extension itself.
+- remove social/sophisticated (e.g. radio) functions
+- add bookmark to youtube page.
 
-The server's modules are managed by NuGet Package Manager.
 
-The server is used to record information about a given user's listening experience. All videos, playlist items, playlists and folders are written to the database.
-The server is used to enable sharing of playlists between users by copying a playlist row and providing a link to the new row to other users.
+In short, it will just be a youtube playlist, no more or less. It will also suit better my flow, that I normally find something interesting on youtube itself, and want to add it from there, instead of searching in the extension again to add to playlist.
 
 
 Client
@@ -23,15 +23,7 @@ Client
 * [UnderscoreJS (v1.5.1+)](http://underscorejs.org/)
 * [Jasmine (v1.5.8+)](http://pivotal.github.io/jasmine/) [Coming soon...]
 
-Server
-------
 
-* [C# ASP.NET MVC (v4.0)](http://www.asp.net/mvc/mvc4)
-* [NUnit (v2.0+)](http://www.nunit.org/)
-* [NHibernate (v3.3.3+)](http://nhforge.org/)
-* [AutoFac (v3.1.1+)](https://code.google.com/p/autofac/)
-* [AutoMapper](https://github.com/AutoMapper/AutoMapper)
-* [log4net](http://logging.apache.org/log4net/)
 
 Installation
 ========
@@ -46,27 +38,17 @@ Client
 
 * NOTE: If you wish to debug the client without a local server instance you will need to set 'localDebug' to false inside 'chrome extension/background/model/settings.js"
 
-Server
-------
-1. Build 'Streamus Server' in Visual Studio 2012.
-2. Build 'Streamus Server Tests' in Visual Studio 2012.
-3. Create a new, local database called 'Streamus'
-4. Run the test case 'ResetDatabase' to populate the database with tables and schema information.
-5. Ensure all other test cases pass.
-6. Run Streamus Server.
 
 Supported Functionality
 ========
 
 * YouTube search
-* Add YouTube video to playlist
+* Add YouTube video to playlist (+from YouTube page)
 * Add YouTube playlist as playlist
 * Add YouTube channel as playlist
 * Play, pause, skip, rewind, shuffle, repeat video, repeat playlist
-* Radio / Discovery
 * Desktop notifications of currently playing video
 * Customizable keyboard shortcuts to control play, pause, skip, previous
-* Sharing of playlists via URL
 * Enhancement of YouTube video pages with injected Streamus HTML
  
 Usage Demo
@@ -81,7 +63,7 @@ This work is licensed under a [Creative Commons Attribution-NonCommercial-NoDeri
 
 Authors
 =======
-
+Following are original authors of the extension:
 * MeoMix - Original developer, main contributor.
 * Misostc - Phenomenal user interfactor designer.
 * MiracleBlue - Brought on as a second developer to help with work load.
